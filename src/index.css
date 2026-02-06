@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pokemon-red: #e3350d;
+  --color-pokemon-blue: #3b4cca;
+  --color-pokemon-yellow: #ffcb05;
+  --color-pokemon-dark: #1a1a2e;
+  --color-pokemon-card: #2a2a4a;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-pokemon-dark) 0%, #16213e 100%);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 203, 5, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 203, 5, 0.6); }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.5s ease-out;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
